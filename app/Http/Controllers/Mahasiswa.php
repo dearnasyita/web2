@@ -78,7 +78,6 @@ class Mahasiswa extends Controller
     public function update(Request $request, $id)
     {
         $data = ModelMahasiswa::where ('nim',$id)->first();
-		$data = new ModelMahasiswa();
 		$data->nama = $request->nama;
 		$data->email = $request->email;
 		$data->nohp = $request->nohp;
@@ -96,6 +95,9 @@ class Mahasiswa extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = ModelMahasiswa::where ('nim',$id)->first();
+		$data->delete();
+		return redirect()->route('mahasiswa.index')->with(
+		'alert-success','Data berhasil di hapus!');
     }
 }
