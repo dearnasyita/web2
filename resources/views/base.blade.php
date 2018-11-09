@@ -57,6 +57,13 @@
 			<li>
                 <a href="/user/create">-Tambah</a>
             </li>
+			
+			<li>
+                <a href="/file">File</a>
+            </li>
+			<li>
+                <a href="/file/create">-Tambah</a>
+            </li>
         </ul>
     </aside>
 
